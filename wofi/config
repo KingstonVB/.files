@@ -1,0 +1,11 @@
+[settings]
+font = monospace 16
+prompt = Search
+show_icons = true
+case_sensitive = false
+
+[colors]
+background = #282828
+foreground = #ebdbb2
+selection_background = #458588
+selection_foreground = #ebdbb2

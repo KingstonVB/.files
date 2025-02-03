@@ -1,0 +1,36 @@
+* {
+  font-family: monospace;
+  font-size: 16px;
+  outline: none;
+  box-shadow: none;
+}
+
+window {
+    background-color: rgba(0,0,0,1);
+    border-radius: 5px;
+}
+
+#input {
+    background-color: rgba(0,0,0,0);
+    color: white;
+    border-color: rgba(0,0,0,0);
+    padding: 10px;
+}
+
+#entry {
+  padding: 5px;
+}
+
+#entry:selected {
+    padding: 5px;
+    background-color: rgba(38,50,56,0.50);
+    border-radius: 5px;
+}
+
+#text {
+  padding: 2px;
+}
+
+#outer-box {
+  padding: 5px;
+}
