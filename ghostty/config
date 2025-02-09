@@ -45,4 +45,4 @@
 font-family = "monospace"
 font-size = 16
 
-theme = Dark+
+theme = catppuccin-mocha
