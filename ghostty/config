@@ -42,7 +42,9 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-font-family = "JetBrains-Mono"
-font-size = 16
+font-family = ""
+font-family = JetBrainsNL Nerd Font Mono
+
+font-size = 14
 
 theme = catppuccin-mocha
