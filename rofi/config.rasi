@@ -1,6 +1,6 @@
 configuration {
 	modi: "window,drun,ssh,combi,run,filebrowser,recursivebrowser,keys,calc,emoji";
-	font: "monospace 16";
-	combi-modi: "window,drun,ssh";
+	font: "JetbrainsMonoNL Nerd Font 16";
+	combi-modi: "window,drun,ssh,run,filebrowser,recursivebrowser,calc,emoji";
 }
 @theme "solarized"
