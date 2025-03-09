@@ -9,7 +9,7 @@ set $down j
 set $up k
 set $right l
 set $term ghostty
-set $menu rofi -show drun
+set $menu rofi -show combi
 set $browser zen-browser
 set $shutdown systemctl poweroff
 set $restart reboot
