@@ -102,7 +102,7 @@
   programs.git = {
   	enable = true;
 	config = {
-		credential.helper = "libsecret";
+		credential.helper = "store";
 	};
   };
 
