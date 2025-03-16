@@ -68,6 +68,7 @@
     isNormalUser = true;
     description = "poppy";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [];
   };
 
@@ -98,6 +99,7 @@
   ];
 
   programs.hyprland.enable = true;
+  programs.zsh.enable = true;
 
   programs.git = {
   	enable = true;
