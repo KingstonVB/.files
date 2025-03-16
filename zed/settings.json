@@ -113,7 +113,7 @@
         "search_results": true,
         "selected_text": true,
         "selected_symbol": true,
-        "diagnostics": "all",
+        "diagnostics": true,
         "axes": {
             "horizontal": true,
             "vertical": true
@@ -211,12 +211,6 @@
     "collaboration_panel": {
         "button": true,
         "dock": "left",
-        "default_width": 240
-    },
-
-    "chat_panel": {
-        "button": "when_in_call",
-        "dock": "right",
         "default_width": 240
     },
 
