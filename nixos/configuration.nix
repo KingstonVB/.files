@@ -79,34 +79,19 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   	neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-	zed-editor
 	ghostty
-	fastfetch
 	libsecret
 	polkit
 	hyprpolkitagent
 	corefonts
 	google-fonts
 	nerdfonts
-	jetbrains-mono
-	btop
-	rofi-wayland
-	rofi-emoji
-	rofi-calc
-	wl-clipboard
 
 	(builtins.getFlake "github:youwen5/zen-browser-flake").packages.${builtins.currentSystem}.default
   ];
 
   programs.hyprland.enable = true;
   programs.zsh.enable = true;
-
-  programs.git = {
-  	enable = true;
-	config = {
-		credential.helper = "store";
-	};
-  };
 
   security.rtkit.enable = true;
   services.pipewire = {
