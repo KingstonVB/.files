@@ -1,4 +1,14 @@
 {
+    "assistant": {
+        "default_model": {
+            "provider": "zed.dev",
+            "model": "claude-3-5-sonnet-latest"
+        },
+        "version": "2"
+    },
+    "features": {
+        "edit_prediction_provider": "supermaven"
+    },
     "languages": {
         "TSX": {
             "show_edit_predictions": false
@@ -30,11 +40,12 @@
     "remove_trailing_whitespace_on_save": true,
     "extend_comment_on_newline": false,
     "ensure_final_newline_on_save": false,
-    "format_on_save": "false",
-    "formatter": "prettier",
-    "soft_wrap": "none",
-    "preferred_line_length": 80,
-    "hard_tabs": true,
+    "format_on_save": "on",
+    "formatter": "language_server",
+    "soft_wrap": "preferred_line_length",
+    "preferred_line_length": 120,
+    "hard_tabs": false,
+    "allow_rewrap": "in_comments",
     "tab_size": 4,
 
     "telemetry": {
@@ -53,6 +64,8 @@
     "edit_predictions": {
         "mode": "subtle"
     },
+
+    "auto_update": true,
 
     "auto_install_extensions": {
         "cattpuccin": true,
