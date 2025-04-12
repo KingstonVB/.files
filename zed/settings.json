@@ -31,5 +31,11 @@
 
     "edit_predictions": {
         "mode": "subtle"
+    },
+
+    "auto_install_extensions": {
+        "html": true,
+        "catppuccin": true,
+        "catppuccin-icons": true
     }
 }
