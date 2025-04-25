@@ -7,10 +7,9 @@ echo '3. Niri'
 echo '4. Qtile'
 echo '5. River'
 echo '6. Cage'
-echo '7. Phoc'
 echo '8. KDE Plasma'
-echo '9. GNOME'
-echo '10. Deepin'
+echo '9. GNOME (Not Supported)'
+echo '10. Deepin (Not Supported)'
 
 read -p 'Enter your choice (1-10): ' choice
 
@@ -37,23 +36,11 @@ case $choice in
   ;;
 6)
   env="Cage"
-  exec_line="cage"
-  ;;
-7)
-  env="Phoc"
-  exec_line="phoc"
+  exec_line="cage -s ghostty"
   ;;
 8)
   env="KDE Plasma"
   exec_line="startplasma-waylan"
-  ;;
-9)
-  env="GNOME"
-  exec_line="gnome-session"
-  ;;
-10)
-  env="Deepin"
-  exec_line="deepin"
   ;;
 *)
   echo "Invalid choice"
