@@ -7,9 +7,6 @@ echo '3. Niri'
 echo '4. Qtile'
 echo '5. River'
 echo '6. Cage'
-echo '8. KDE Plasma'
-echo '9. GNOME (Not Supported)'
-echo '10. Deepin (Not Supported)'
 
 read -p 'Enter your choice (1-10): ' choice
 
@@ -20,7 +17,7 @@ case $choice in
   ;;
 2)
   env="Sway"
-  exec_line="sway"
+  exec_line="sway --unsupported-gpu"
   ;;
 3)
   env="Niri"
@@ -37,10 +34,6 @@ case $choice in
 6)
   env="Cage"
   exec_line="cage -s ghostty"
-  ;;
-8)
-  env="KDE Plasma"
-  exec_line="startplasma-waylan"
   ;;
 *)
   echo "Invalid choice"
