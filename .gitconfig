@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = main
+[user]
+	email = User Emaul
+	name = User Name
+[pull]
+	rebase = false
+[core]
+	editor = zeditor --wait
