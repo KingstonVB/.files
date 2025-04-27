@@ -1,6 +1,6 @@
 configuration {
-	modi: "window,drun,ssh,combi,run,filebrowser,recursivebrowser,keys";
+	modi: "window,drun,ssh,combi,filebrowser,recursivebrowser,keys";
 	font: "JetbrainsMonoNL Nerd Font 16";
-	combi-modi: "window,drun,ssh,run,filebrowser,recursivebrowser,keys";
+	combi-modi: "window,drun,ssh,filebrowser,recursivebrowser,keys";
 }
 @theme "themes/raycast.rasi"
