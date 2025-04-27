@@ -1,6 +1,6 @@
 configuration {
 	modi: "drun";
-	font: "JetbrainsMonoNL Nerd Font 16";
+	font: "Inter 16";
 }
 
 @theme "themes/raycast.rasi"
