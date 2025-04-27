@@ -39,7 +39,6 @@ ln -s ~/.files/zed ~/.config/
 ln -s ~/.files/.zshrc ~/
 ln -s ~/.files/.tmux.conf ~/
 
-chmod +x ~/.files/scripts/cde.sh 
 echo "Configured .files"
 
 echo "Installing Zen Browser"
