@@ -1,101 +1,101 @@
-/* ~/.config/rofi/themes/raycast.rasi */
+/* ~/.config/rofi/themes/raycast-style.rasi */
 
 * {
-    /* Define colors and base settings */
-    background-color: #282A36; /* Example: Draculesque background */
-    border-color:     #44475A;
-    text-color:       #F8F8F2;
-    font:             "Inter 11"; /* Or your preferred font */
+    /* --- Define Colors --- */
+    bg-col:           rgba(0, 0, 0, 0.9);
+    bg-alt-col:       rgba(30, 30, 30, 0.9);
+    fg-col:           #EAEAEA;
+    hl-col:           #FFFFFF;
+    placeholder-col:  rgba(234, 234, 234, 0.4);
+    border-col:       rgba(255, 255, 255, 0.25);
 
-    /* Raycast often uses transparency */
-    /* background-color: rgba(40, 42, 54, 0.9); */
-
-    /* Remove default spacing */
-    spacing: 0;
-    padding: 0;
-    margin:  0;
+    /* --- Global settings --- */
+    background-color: transparent;
+    text-color:       @fg-col;
+    spacing:          0;
+    padding:          0;
+    margin:           0;
 }
 
 window {
-    /* --- Centering --- */
-    location: center;
-    anchor:   center;
-    /* --- Sizing --- */
-    width:    50%; /* Adjust as needed */
+    /* --- Window Shape & Position --- */
+    location:         center;
+    anchor:           center;
+    width:            50%;
+    border-radius:    12px;
+
     /* --- Appearance --- */
-    border: 0px; /* Often borderless */
-    border-radius: 8px; /* Rounded corners */
-    background-color: @background-color;
-    /* Add padding inside the window */
-    padding: 10px;
+    background-color: @bg-col;
+    border-width:     1px;
+    border-color:     rgba(255,255,255,0.25);
+    padding:          15px; 
+
+    /* --- Layout --- */
+    orientation:      vertical;
+    children:         [ mainbox ];
 }
 
 mainbox {
-    /* Container for inputbar and listview */
-    children: [ inputbar, listview ];
-    spacing: 10px; /* Space between input and results */
-    padding: 5px;
+    expand:           true;
+    spacing:          15px;
+    children:         [ inputbar, listview ];
 }
 
 inputbar {
-    children: [ prompt, entry ];
-    background-color: #44475A; /* Slightly different background */
-    text-color:       @text-color;
-    padding:          8px 12px;
-    border-radius:    5px;
-    margin:           0px 0px 10px 0px; /* Add margin below input bar */
-}
-
-prompt {
-    enabled:          true; /* Set to false if you don't want "drun >" */
-    padding:          0px 8px 0px 0px;
-    background-color: inherit;
-    text-color:       inherit;
+    padding:          10px;
+    spacing:          10px;
+    children:         [ entry ];
 }
 
 entry {
-    placeholder:      "Search...";
-    placeholder-color: #6272A4;
-    background-color: inherit;
-    text-color:       inherit;
-    vertical-align:   0.5; /* Center text vertically */
+    placeholder:        "Search...";
+    placeholder-color:  @placeholder-col;
+    background-color:   inherit;
+    text-color:         @fg-col;
+    expand:             true;
+    vertical-align:     0.5;
+    blink:              true;
 }
 
 listview {
-    lines:            8; /* Max number of visible lines */
+    lines:            8;
     columns:          1;
-    cycle:            true; /* Cycle through results */
-    dynamic:          true; /* Adjust height dynamically */
+    cycle:            true;
+    dynamic:          true;
     layout:           vertical;
-    scrollbar:        false; /* Raycast usually doesn't show scrollbars */
-    spacing:          5px; /* Space between elements */
+    scrollbar:        false;
+    spacing:          8px;
+    padding:          5px 0px 0px 0px;
 }
 
 element {
-    padding: 8px 12px;
-    border-radius: 5px;
-    children: [ element-icon, element-text ];
+    padding:          8px 12px;
+    border-radius:    6px;
+    spacing:          12px;
+    orientation:      horizontal;
+    children:         [ element-icon, element-text ];
 }
 
 element-icon {
-    size: 1.5em; /* Adjust icon size */
-    vertical-align: 0.5;
-    padding: 0px 10px 0px 0px;
+    size:             1.8em;
+    vertical-align:   0.5;
+    horizontal-align: 0.5;
 }
 
 element-text {
-    vertical-align: 0.5;
-    text-color: inherit;
+    vertical-align:   0.5;
+    horizontal-align: 0.0;
+    text-color:       inherit;
+    highlight:        inherit;
 }
 
+/* --- Element States --- */
 element normal.normal {
-    background-color: @background-color;
-    text-color:       @text-color;
+    background-color: transparent;
+    text-color:       @fg-col;
 }
 
 element selected.normal {
-    background-color: #6272A4; /* Highlight color */
-    text-color:       @text-color;
+    background-color: @bg-alt-col;
+    text-color:       @hl-col;
 }
-
-/* Add other states if needed (urgent, active) */
