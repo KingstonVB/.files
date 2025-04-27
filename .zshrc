@@ -104,11 +104,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # bun completions
-[ -s "/home/poppy/.bun/_bun" ] && source "/home/poppy/.bun/_bun"
+[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bitwarden
+export SSH_AUTH_SOCK=$HOME/.bitwarden-ssh-agent.sock
 
 # Aliases
 alias update="sudo pacman -Syu && yay"
