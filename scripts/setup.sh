@@ -42,9 +42,3 @@ ln -s ~/.files/.tmux.conf ~/
 echo "Configured .files"
 
 echo "Installing Zen Browser"
-cd ~/apps/
-mkdir ~/apps/zen-browser/
-git clone https://github.com/zen-browser/desktop.git --rescurse-submodules
-cd ~/apps/zen-browser/desktop
-
-
