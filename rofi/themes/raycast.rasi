@@ -21,7 +21,7 @@ window {
     location: center;
     anchor:   center;
     /* --- Sizing --- */
-    width:    600px; /* Adjust as needed */
+    width:    50%; /* Adjust as needed */
     /* --- Appearance --- */
     border: 0px; /* Often borderless */
     border-radius: 8px; /* Rounded corners */
