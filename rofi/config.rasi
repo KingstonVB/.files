@@ -3,4 +3,4 @@ configuration {
 	font: "JetbrainsMonoNL Nerd Font 16";
 	combi-modi: "window,drun,ssh,run,filebrowser,recursivebrowser,keys";
 }
-@theme "solarized"
+@theme "themes/raycast.rasi"
