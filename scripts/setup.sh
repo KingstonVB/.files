@@ -10,10 +10,6 @@ makepkg -si
 cd
 echo "Paru Installed"
 
-echo "Installing Nix"
-sh <(curl -L https://nixos.org/nix/install) --daemon
-echo "Nix Installed"
-
 echo "Configuring TLDR"
 tldr -u
 echo "TLDR Configured"
