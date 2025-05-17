@@ -35,7 +35,7 @@ install_packages() {
     sudo pacman -Syu
         
     echo "Installing Official Packages..."
-    sudo pacman -Sy hyprland ripgrep unzip fastfetch man tldr ghostty neovim zed pavucontrol rofi-wayland bitwarden
+    sudo pacman -Sy hyprland ripgrep unzip fastfetch man tldr ghostty neovim zed pavucontrol rofi-wayland bitwarden tmux
         
     echo "Installing yay for AUR packages..."
     git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
