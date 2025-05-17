@@ -86,6 +86,7 @@ if ["$EUID" -eq 0]; then
     exit 1
 fi
 
+setup_git
 install_packages
 clone_repositories
 setup_dotfiles
