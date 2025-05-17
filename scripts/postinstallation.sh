@@ -4,7 +4,7 @@
 set -e
 
 # Variables
-DOTFILES_REPO="<SSH_GITHUB_URL>"
+DOTFILES_REPO="git@github.com:K-Bayard/.files.git"
 
 # --- Installation Functions --- #
 setup_git() {
@@ -12,7 +12,7 @@ setup_git() {
     sudo pacman -Syu
         
     echo "Installing git"
-    sudo pacman -Sy gitconfig
+    sudo pacman -Sy git
         
     echo "Configuring git"
     read -p "Enter git username" GIT_USERNAME
