@@ -48,6 +48,7 @@ install_packages() {
 
 clone_repositories() {
     echo "Cloning .files..."
+    cd ~
     git clone $DOTFILES_REPO
     
     echo "Respositories cloned..."
