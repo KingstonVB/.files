@@ -63,6 +63,8 @@ setup_dotfiles() {
     ln -sf $HOME/.files/ghostty $HOME/.config/
     ln -sf $HOME/.files/zed $HOME/.config/
     ln -sf $HOME/.files/nvim $HOME/.config/
+    ln -sf $HOME/.files/.tmux.conf $HOME/
+    ln -sf $HOME/.files/tmux $HOME/.config/
     
     echo ".files linked to thier directories"
 }
