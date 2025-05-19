@@ -1,6 +1,6 @@
 {
-    "icon_theme": "Catppuccin Mocha",
-    "theme": "Catppuccin Mocha",
+    "icon_theme": "VSCode Icons (Dark)",
+    "theme": "VSCode Dark Polished",
 
     "buffer_font_family": "JetBrainsMonoNL Nerd Font",
     "buffer_font_fallbacks": ["Zed Plex Mono"],
