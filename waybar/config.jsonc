@@ -1,17 +1,18 @@
 {
-    "height": 24,
-    "spacing": 10,
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 4, // Waybar height (to be removed for auto height)
     
-    "modules-left": [
-        "power"
-    ],
+    "modules-center": ["hyprland/workspaces"],
     
-    "modules-center": [
-        "hyprland/window"
-    ],
-    
-    "modlules-right": [
-        "network",
-        "clock"
-    ]
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "active": "   ", /* We'll hide these with CSS */
+            "default": "   " /* We'll hide these with CSS */
+        },
+        "sort-by-number": true, /* Keeps the workspace order consistent */
+        "active-only": false
+    }
 }
