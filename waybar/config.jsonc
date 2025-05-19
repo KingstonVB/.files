@@ -1,0 +1,17 @@
+{
+    "height": 24,
+    "spacing": 10,
+    
+    "modules-left": [
+        "power"
+    ],
+    
+    "modules-center": [
+        "hyprland/window"
+    ],
+    
+    "modlules-right": [
+        "network",
+        "clock"
+    ]
+}
