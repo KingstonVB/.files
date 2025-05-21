@@ -1,18 +1,24 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 4, // Waybar height (to be removed for auto height)
+    "height": 24, // Waybar height (to be removed for auto height)
     
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-right": ["clock"],
     
     "hyprland/workspaces": {
         "all-outputs": true,
         "format": "{icon}",
         "format-icons": {
-            "active": "   ", /* We'll hide these with CSS */
-            "default": "   " /* We'll hide these with CSS */
+            "active": "", /* We'll hide these with CSS */
+            "default": "" /* We'll hide these with CSS */
         },
         "sort-by-number": true, /* Keeps the workspace order consistent */
         "active-only": false
+    },
+    
+    "clock": {
+        "interval": 1,
+        "format": "{:%a %B %d %r}"
     }
 }
