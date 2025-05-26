@@ -3,7 +3,12 @@
 [user]
 	email = User Email
 	name = User Name
+	signingkey = "ssh-key"
 [pull]
 	rebase = false
 [core]
 	editor = zeditor --wait
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
