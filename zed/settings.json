@@ -5,7 +5,6 @@
     "buffer_font_family": "JetBrainsMonoNL Nerd Font",
     "buffer_font_fallbacks": ["Zed Plex Mono"],
     "buffer_font_features": {
-        // Disable ligatures:
         "calt": false
     },
     "buffer_font_size": 16,
