@@ -3,7 +3,7 @@
 [user]
 	email = User Email
 	name = User Name
-	signingkey = "ssh-key"
+	signingkey = "public ssh-key"
 [pull]
 	rebase = false
 [core]
