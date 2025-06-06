@@ -1,0 +1,94 @@
+{
+    "archinstall-language": "English",
+    "audio_config": {
+        "audio": "pipewire"
+    },
+    "bootloader": "Grub",
+    "custom_commands": [
+        "sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers",
+        "echo 'Defaults rootpw' >> /etc/sudoers",
+
+        "sed -i 's/^MODULES=.*/MODULES=(nvidia_modeset nvidia_uvm nvidia-drm)/' /etc/mkinitcpio.conf || echo 'MODULES=(nvidia_modeset nvidia_uvm nvidia-drm)' >> /etc/mkinitcpio.conf",
+        "mkinitcpio -P",
+        
+        "chsh -s /usr/bin/zsh poppy",
+        "usermod -aG storage,power,docker poppy"
+    ],
+    "hostname": "arch",
+    "kernels": [
+        "linux-zen"
+    ],
+    "locale_config": {
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US.UTF-8"
+    },
+    "mirror_config": {
+        "optional_repositories": [
+            "multilib"
+        ]
+    },
+    "ntp": true,
+    "packages": [
+        "base-devel",
+        "bitwarden",
+        "docker",
+        "egl-wayland",
+        "fastfetch",
+        "flatpak",
+        "ghostty",
+        "git",
+        "hyprland",
+        "hyprpaper",
+        "hyprpicker",
+        "hyprpolkitagent",
+        "intel-ucode",
+        "libglvnd",
+        "libnewt",
+        "linux-zen-headers",
+        "mako",
+        "neovim",
+        "nvidia-open-dkms",
+        "nvidia-settings",
+        "nvidia-utils",
+        "nwg-look",
+        "obsidian",
+        "opencl-nvidia",
+        "qt5-wayland",
+        "qt5ct",
+        "qt6-wayland",
+        "qt6ct",
+        "ripgrep",
+        "rofi-wayland",
+        "tealdeer",
+        "tmux",
+        "ttf-jetbrains-mono-nerd",
+        "ttf-jetbrains-mono",
+        "udiskie",
+        "udisks2",
+        "unzip",
+        "uwsm",
+        "wl-clipboard",
+        "xdg-desktop-portal-hyprland",
+        "zed",
+        "zsh-completions",
+        "zsh"
+    ],
+    "parallel_downloads": 0,
+    "profile_config": {
+        "gfx_driver": null,
+        "greeter": null,
+        "profile": {
+            "custom_settings": {},
+            "details": [],
+            "main": "Minimal"
+        }
+    },
+    "services": [
+        "docker.service",
+        "udisks2.service"
+    ],
+    "swap": true,
+    "timezone": "US/Eastern",
+    "version": null
+}
