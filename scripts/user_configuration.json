@@ -31,7 +31,6 @@
     "ntp": true,
     "packages": [
         "base-devel",
-        "bitwarden",
         "docker",
         "egl-wayland",
         "fastfetch",
