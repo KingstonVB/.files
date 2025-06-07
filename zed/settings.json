@@ -1,43 +1,43 @@
 {
-    "icon_theme": "VSCode Icons (Dark)",
-    "theme": "VSCode Dark Polished",
+  "icon_theme": "VSCode Icons (Dark)",
+  "theme": "VSCode Dark Polished",
 
-    "buffer_font_family": "JetBrainsMonoNL Nerd Font",
-    "buffer_font_fallbacks": ["Zed Plex Mono"],
-    "buffer_font_features": {
-        "calt": false
-    },
-    "buffer_font_size": 16,
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font",
+  "buffer_font_fallbacks": ["Zed Plex Mono"],
+  "buffer_font_features": {
+    "calt": false
+  },
+  "buffer_font_size": 16,
 
-    "ui_font_family": "JetBrainsMonoNL Nerd Font",
-    "ui_font_fallbacks": ["Zed Plex Sans"],
+  "ui_font_family": "JetBrainsMonoNL Nerd Font",
+  "ui_font_fallbacks": ["Zed Plex Sans"],
 
-    "vim_mode": true,
+  "vim_mode": true,
 
-    "tab_size": 4,
+  "tab_size": 4,
 
-    "telemetry": {
-        "diagnostics": false,
-        "metrics": false
-    },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
 
-    "diagnostics": {
-        "include_warnings": true,
-        "inline": {
-            "enabled": true
-        }
-    },
+  "diagnostics": {
+    "include_warnings": true,
+    "inline": {
+      "enabled": true
+    }
+  },
 
-    "edit_predictions": {
-        "mode": "subtle"
-    },
+  "edit_predictions": {
+    "mode": "subtle"
+  },
 
-    "auto_install_extensions": {
-        "VSCode Dark Polished",
-        "VSCode Icons (Dark)"
-    },
+  "auto_install_extensions": {
+    "vscode-dark-polished": true,
+    "vscode-icons": true
+  },
 
-    "format_on_save": "off",
-    "ensure_final_newline_on_save": false,
-    "remove_trailing_whitespace_on_save": false
+  "format_on_save": "off",
+  "ensure_final_newline_on_save": false,
+  "remove_trailing_whitespace_on_save": false
 }
