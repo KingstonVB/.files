@@ -54,6 +54,7 @@
         "obsidian",
         "opencl-nvidia",
         "openssh",
+        "os-prober",
         "pavucontrol-qt",
         "qt5-wayland",
         "qt5ct",
@@ -88,7 +89,8 @@
     },
     "services": [
         "docker.service",
-        "udisks2.service"
+        "udisks2.service",
+        "sshd.service"
     ],
     "swap": true,
     "timezone": "US/Eastern",
