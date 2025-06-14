@@ -28,6 +28,8 @@ vim.o.timeoutlen = 300
 vim.o.splitright = true
 vim.o.splitbelow = true
 
+--tab stuff
+
 vim.o.inccommand = "split"
 
 vim.o.cursorline = true

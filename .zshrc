@@ -30,6 +30,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # Aliases
 alias update="sudo pacman -Syu && flatpak update && paru"
 alias vbackup="git add . && git commit -m \"vault backup: $(date +'%Y-%m-%d %H:%M:%S')\""
+alias .files="cd ~/.files"
 
 # ssh-agent auto start
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
