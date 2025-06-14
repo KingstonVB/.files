@@ -29,25 +29,18 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Aliases
 alias update="sudo pacman -Syu && flatpak update && paru"
+alias vbackup="git add . && git commit -m \"vault backup: $(date +'%Y-%m-%d %H:%M:%S')\""
 
 # ssh-agent auto start
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 eval $(keychain --eval --quiet arch_desktop)
 
 # Automatically start or attach to a tmux session
-if command -v tmux &> /dev/null; then
-    case $- in
-        *i*)
-            if [ -z "$TMUX_PANE" ]; then
-                tmux has-session &> /dev/null
-                if [ $? -eq 0 ]; then
-                    tmux attach-session
-                else
-                    tmux new-session
-                fi
-            fi
-            ;;
-    esac
+if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
+	if ! systemctl --user is-active --quiet tmux.service; then
+	    systemctl --user start tmux.service
+	fi
+	exec tmux attach-session -d -t "${USER}" >/dev/null 2>&1
 fi
 
 # Custom prompt
