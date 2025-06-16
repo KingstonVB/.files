@@ -7,3 +7,5 @@ window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = true
 window-padding-color = extend
+
+background = #1F1F1F
