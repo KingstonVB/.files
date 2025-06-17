@@ -6,8 +6,6 @@ vim.g.have_nerd_font = true
 vim.o.number = true
 vim.o.relativenumber = true
 
-vim.o.showmode = false
-
 vim.schedule(function()
 	vim.o.clipboard = "unnamedplus"
 end)
