@@ -36,3 +36,24 @@ vim.o.cursorline = true
 vim.o.scrolloff = 10
 
 vim.o.confirm = true
+
+-- Change the background color
+local hl = vim.api.nvim_set_hl
+local bg = { bg = "#1F1F1F" }
+hl(0, "Normal", bg)
+hl(0, "NormalFloat", bg)
+hl(0, "SignColumn", bg)
+hl(0, "FoldColumn", bg)
+hl(0, "EndOfBuffer", bg)
+
+vim.api.nvim_create_augroup("MyBgOverride", { clear = true })
+vim.api.nvim_create_autocmd("ColorScheme", {
+	group = "MyBgOverride",
+	callback = function()
+		hl(0, "Normal", bg)
+		hl(0, "NormalFloat", bg)
+		hl(0, "SignColumn", bg)
+		hl(0, "FoldColumn", bg)
+		hl(0, "EndOfBuffer", bg)
+	end,
+})

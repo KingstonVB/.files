@@ -2,6 +2,7 @@ require("config.general")
 require("config.keymap")
 require("config.statusline")
 
+-- Lazy plugin manager setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -15,6 +16,7 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
+-- Lazy plugins
 require("lazy").setup({
 	{ import = "plugins" },
 }, {
