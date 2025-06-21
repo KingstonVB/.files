@@ -51,6 +51,7 @@
 		"nvidia-settings",
 		"nvidia-utils",
 		"obsidian",
+		"ollama",
 		"opencl-nvidia",
 		"openssh",
 		"os-prober",
