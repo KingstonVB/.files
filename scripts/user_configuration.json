@@ -12,7 +12,10 @@
 		"mkinitcpio -P",
 
 		"chsh -s /usr/bin/zsh poppy",
-		"usermod -aG storage,power,docker poppy"
+		"usermod -aG storage,power,docker,libvirt poppy",
+
+		"sed -i 's/^#* *unix_sock_group = .*/unix_sock_group = \"libvirt\"/' /etc/libvirt/libvirtd.conf",
+		"sed -i 's/^#* *unix_sock_rw_perms = .*/unix_sock_rw_perms = \"0770\"/' /etc/libvirt/libvirtd.conf"
 	],
 	"hostname": "arch",
 	"kernels": ["linux-zen"],
@@ -27,6 +30,7 @@
 	"ntp": true,
 	"packages": [
 		"base-devel",
+		"dnsmasq",
 		"docker",
 		"egl-wayland",
 		"fastfetch",
@@ -56,6 +60,7 @@
 		"openssh",
 		"os-prober",
 		"pavucontrol-qt",
+		"qemu-full",
 		"qt5-wayland",
 		"qt5ct",
 		"qt6-wayland",
@@ -70,8 +75,17 @@
 		"udisks2",
 		"unzip",
 		"uwsm",
+		"qemu-base",
+		"virt-manager",
+		"virt-viewer",
 		"wl-clipboard",
 		"xdg-desktop-portal-gtk",
+		"vde2",
+		"bridge-utils",
+		"openbsd-netcat",
+		"ebtables",
+		"iptables-nft",
+		"libguestfs",
 		"xdg-desktop-portal-hyprland",
 		"zsh-completions",
 		"zsh"
@@ -86,7 +100,7 @@
 			"main": "Minimal"
 		}
 	},
-	"services": ["docker.service", "udisks2.service", "sshd.service"],
+	"services": ["docker.service", "udisks2.service", "sshd.service", "libvirtd.service"],
 	"swap": true,
 	"timezone": "US/Eastern",
 	"version": null
