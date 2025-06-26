@@ -1,6 +1,5 @@
 require("config.general")
 require("config.keymap")
-require("config.statusline")
 
 -- Lazy plugin manager setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
