@@ -1,8 +1,10 @@
+# Overview
+
+ > ## I clone the repository into my home directory and then symlink all the files I need to use.
+
 # .files/nvim
 
 ## Install Instructions
-
- > I clone the repository intot he home directory then symlink all of the files that I need from it into their corresponding .config/ directory 
 
 Clone the repository and install the plugins:
 
