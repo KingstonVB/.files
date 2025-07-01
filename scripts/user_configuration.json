@@ -59,6 +59,7 @@
 		"opencl-nvidia",
 		"openssh",
 		"os-prober",
+		"tree",
 		"pavucontrol-qt",
 		"qemu-full",
 		"qt5-wayland",
@@ -88,7 +89,9 @@
 		"libguestfs",
 		"xdg-desktop-portal-hyprland",
 		"zsh-completions",
-		"zsh"
+		"zsh",
+		"zig",
+		"github-cli",
 	],
 	"parallel_downloads": 0,
 	"profile_config": {
