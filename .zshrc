@@ -3,8 +3,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 HYPHEN_INSENSITIVE="true"
 
-ENABLE_CORRECTION="true"
-
 COMPLETION_WAITING_DOTS="true"
 
 # Standard plugins can be found in $ZSH/plugins/
@@ -17,29 +15,22 @@ source $ZSH/oh-my-zsh.sh
 
 # Hyprland with uwsm
 if uwsm check may-start; then 
-  exec uwsm start hyprland.desktop
+  exec uwsm start default
 fi
-
-# bun completions
-[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# Aliases
-alias update="sudo pacman -Syu && flatpak update && paru"
-alias vbackup="git add . && git commit -m \"vault backup: $(date +'%Y-%m-%d %H:%M:%S')\""
-alias .files="cd ~/.files"
-
-# ssh-agent auto start
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-eval $(keychain --eval --quiet arch_desktop)
 
 # Automatically start or attach to a tmux session
 if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
     exec tmux new-session -A -s ${USER} >/dev/null 2>&1
 fi
+
+# ssh-agent auto start
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+eval $(keychain --eval --quiet arch_desktop)
+
+# Aliases
+alias update="sudo pacman -Syu && flatpak update && paru"
+alias vbackup="git add . && git commit -m \"vault backup: $(date +'%Y-%m-%d %H:%M:%S')\""
+alias .files="cd ~/.files"
 
 # Custom prompt
 PROMPT_GREEN="green"
