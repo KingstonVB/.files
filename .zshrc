@@ -31,18 +31,10 @@ eval $(keychain --eval --quiet arch_desktop)
 alias update="sudo pacman -Syu && flatpak update && paru"
 alias vbackup="git add . && git commit -m \"vault backup: $(date +'%Y-%m-%d %H:%M:%S')\""
 alias .files="cd ~/.files"
+alias cd="cd && ls"
 
-# Custom prompt
-PROMPT_GREEN="green"
-PROMPT_RED="red"
-PROMPT_CYAN="cyan"
-PROMPT_BLUE="blue"
-PROMPT_YELLOW="yellow"
+# PROMPT
+PROMPT="[%(?:%{$fg[${PROMPT_GREEN}]%}%1{%n%}:%{$fg[${PROMPT_RED}]%}%1{%n%}) %{$fg[${PROMPT_CYAN}]%}%c%{$reset_color%}]$ "
 
-PROMPT="%(?:%{$fg_bold[${PROMPT_GREEN}]%}%1{%n%}:%{$fg_bold[${PROMPT_RED}]%}%1{%n%}) %{$fg[${PROMPT_CYAN}]%}%c%{$reset_color%}"
-PROMPT+=' $(git_prompt_info)'
-
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[${PROMPT_BLUE}]%}git:(%{$fg[${PROMPT_RED}]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[${PROMPT_BLUE}]%}) %{$fg[${PROMPT_YELLOW}]%}%1{✗%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[${PROMPT_BLUE}]%})"
+# Zoxide init
+eval "$(zoxide init bash)"
