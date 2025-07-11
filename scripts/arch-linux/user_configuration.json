@@ -51,6 +51,7 @@
 		"libglvnd",
 		"libnewt",
 		"linux-zen-headers",
+        "discover",
 		"mako",
 		"cmake",
 		"cpio",
