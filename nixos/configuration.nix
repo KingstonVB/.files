@@ -1,22 +1,32 @@
 { config, pkgs, ... }:
+
 let
-	
+
 in
 {
 	imports = [
 		./hardware-configuration.nix
 	];
 
+	nix.settings.experimental-features = [ "nix-command" "flakes" ];
+	nix.settings.download-buffer-size = 52428800;
+
+	# Boot Loader
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
 
+	# Lates Kernel
+	boot.kernelPackages = pkgs.linuxPackages_latest;
+
+	# Networking
 	networking.hostName = "nixos";
 	networking.networkmanager.enable = true;
 
+	# Time Zone
 	time.timeZone = "America/New_York";
 
+	# Locales
 	i18n.defaultLocale = "en_US.UTF-8";
-
 	i18n.extraLocaleSettings = {
 		LC_ADDRESS = "en_US.UTF-8";
 		LC_IDENTIFICATION = "en_US.UTF-8";
@@ -29,22 +39,29 @@ in
 		LC_TIME = "en_US.UTF-8";
 	};
 
+	# Users
 	users.users.poppy = {
 		isNormalUser = true;
-		description = "poppy";
 		extraGroups = [ "networkmanager" "wheel" ];
-		packages = with pkgs; [];
 	};
 
+	# Allow non-free packages
 	nixpkgs.config.allowUnfree = true;
 
+	# System Packages
 	environment.systemPackages = with pkgs; [
-
+		neovim
+		git
+		ghostty
+		zsh
+		zsh-completions
+		zsh-autosuggestions
+		zsh-autocomplete
 	];
 
-	programs.hyprland.enable = true;
-
+	# Services to be enabled
 	services.openssh.enable = true;
 
+	# Don't Change
 	system.stateVersion = "25.05";
 }
