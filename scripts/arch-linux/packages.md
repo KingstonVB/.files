@@ -3,7 +3,7 @@
 * dnsmasq
 * superfile
     * TUI file manager
-* thunar 
+* thunar
     * GUI file manager
 * docker
     * Virtual cotnainers for development
@@ -99,12 +99,21 @@
     * CLI tool for github
 * zsh-autosuggestions
 * zsh-autocomplete
+* obs-studio
+* fastfetch
 ## AUR Packages
 * octopi
+	* GUI for Pacman and AUR packages
 * hyprls
 * hyprsysteminfo
 * opentabletdriver
+	* For drawing tablets
+* quickshell
+	* Widgets and such
 ## Flatpak Packages
 * zen
+	* My browser of choice
 * onlyoffice
+	* Office suite
 * sober
+	* Roblox player

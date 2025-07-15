@@ -108,7 +108,7 @@
 			"main": "Minimal"
 		}
 	},
-	"services": ["docker.service", "udisks2.service", "sshd.service", "libvirtd.service"],
+	"services": ["docker.service", "udisks2.service", "sshd.service", "libvirtd.service", "bluetooth.service"],
 	"swap": true,
 	"timezone": "US/Eastern",
 	"version": null
