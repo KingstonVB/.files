@@ -8,7 +8,7 @@
 		"sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers",
 		"echo 'Defaults rootpw' >> /etc/sudoers",
 
-		"sed -i 's/^MODULES=.*/MODULES=(nvidia_modeset nvidia_uvm nvidia-drm)/' /etc/mkinitcpio.conf || echo 'MODULES=(nvidia_modeset nvidia_uvm nvidia-drm)' >> /etc/mkinitcpio.conf",
+		"sed -i 's/^MODULES=.*/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia-drm)/' /etc/mkinitcpio.conf || echo 'MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia-drm)' >> /etc/mkinitcpio.conf",
 		"mkinitcpio -P",
 
 		"chsh -s /usr/bin/zsh poppy",
