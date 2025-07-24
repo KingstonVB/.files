@@ -48,30 +48,6 @@
 		"enabled": true
 	},
 
-	"outline_panel": {
-		"button": false,
-		"dock": null
-	},
-	"collaboration_panel": {
-		"button": false,
-		"dock": null
-	},
-	"chat_panel": {
-		"button": "never",
-		"dock": null
-	},
-	"git_panel": {
-		"dock": "left",
-		"button": true
-	},
-	"notification_panel": {
-		"button": false,
-		"dock": null
-	},
-	"agent": {
-		"button": false
-	},
-
 	"tabs": {
 		"git_status": true,
 		"show_diagnostics": "all"
