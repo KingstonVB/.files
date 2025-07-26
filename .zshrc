@@ -5,6 +5,7 @@ source $ZSH/oh-my-zsh.sh
 # PROMPT
 PROMPT="%B%{$fg[red]%}[%{$fg[blue]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
+
 # Auto Update
 if [ "$(date +%u)" -eq 6 ]; then
     while true; do
