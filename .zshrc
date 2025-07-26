@@ -7,22 +7,22 @@ PROMPT="%B%{$fg[red]%}[%{$fg[blue]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magen
 
 
 # Auto Update
-if [ "$(date +%u)" -eq 6 ]; then
-    while true; do
-        echo "It is Saturday! do you wish to update? (y/n)"
-        read -r response
-        if [ "$response" = "y" ]; then
-            echo "Updating system"
-            update
-            break
-        elif [ "$response" = "n" ]; then
-            echo "Will ask again in 1 hour."
-            sleep 3600
-        else
-            echo "Invalid response. Please type 'y' for yes or 'n' for no."
-        fi
-    done
-fi
+# if [ "$(date +%u)" -eq 6 ]; then
+#     while true; do
+#         echo "It is Saturday! do you wish to update? (y/n)"
+#         read -r response
+#         if [ "$response" = "y" ]; then
+#             echo "Updating system"
+#             update
+#             break
+#         elif [ "$response" = "n" ]; then
+#             echo "Will ask again in 1 hour."
+#             sleep 3600
+#         else
+#             echo "Invalid response. Please type 'y' for yes or 'n' for no."
+#         fi
+#     done
+# fi
 
 # Tmux
 
