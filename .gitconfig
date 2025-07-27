@@ -8,10 +8,7 @@
 	rebase = false
 [core]
 	editor = zeditor --wait
-	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
 [gpg]
 	format = ssh
 [commit]
 	gpgsign = true
-[gpg "ssh"]
-	program = C:/Windows/System32/OpenSSH/ssh-keygen.exe
