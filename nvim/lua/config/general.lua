@@ -41,5 +41,3 @@ vim.o.confirm = true
 vim.opt.fillchars = { eob = " " }
 
 vim.o.showmode = false
-
-vim.cmd.colorscheme("vscode")
