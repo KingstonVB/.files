@@ -18,15 +18,17 @@
 		"sed -i 's/^#* *unix_sock_rw_perms = .*/unix_sock_rw_perms = \"0770\"/' /etc/libvirt/libvirtd.conf"
 	],
 	"hostname": "arch",
-	"kernels": ["linux-zen"],
+	"kernels": [
+        "linux-zen"
+    ],
 	"locale_config": {
 		"kb_layout": "us",
 		"sys_enc": "UTF-8",
 		"sys_lang": "en_US.UTF-8"
 	},
-	"mirror_config": {
-		"optional_repositories": ["multilib"]
-	},
+    "network_config": {
+        "type": "nm"
+    },
 	"ntp": true,
 	"packages": [
 		"base-devel",
@@ -96,19 +98,24 @@
 		"zsh-completions",
 		"zsh",
 		"zig",
-		"github-cli",
+		"github-cli"
 	],
-	"parallel_downloads": 0,
 	"profile_config": {
-		"gfx_driver": null,
-		"greeter": null,
+		"gfx_driver": "Nvidia (open kernel module for newer GPUs, Turing+)",
+		"greeter": "sddm",
 		"profile": {
-			"custom_settings": {},
-			"details": [],
-			"main": "Minimal"
+			"custom_settings": {
+                "Hyprland": {
+                    "seat_access": "polkit"
+                }
+            },
+			"details": [
+                "Hyprland"
+            ],
+			"main": "Desktop"
 		}
 	},
-	"services": ["docker.service", "udisks2.service", "sshd.service", "libvirtd.service", "bluetooth.service"],
+	"services": ["docker.service", "udisks2.service", "sshd.service", "libvirtd.service"],
 	"swap": true,
 	"timezone": "US/Eastern",
 	"version": null
