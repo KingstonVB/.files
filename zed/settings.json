@@ -1,13 +1,4 @@
 {
-	"show_edit_predictions": false,
- "agent": {
-		"single_file_review": true,
-  "default_model": {
-			"provider": "ollama",
-			"model": "gemma3:27b"
-		}
-	},
-
 	"theme": {
 		"mode": "dark",
 		"light": "Catppuccin Latte",
@@ -38,7 +29,8 @@
 
 	"title_bar": {
 		"show_branch_icon": false,
-		"show_onboarding_banner": false
+		"show_onboarding_banner": false,
+		"show_sign_in": false
 	},
 
 	"minimap": {
@@ -61,6 +53,8 @@
 	"hard_tabs": true,
 	"tab_size": 4,
 
+	"auto_install_extensions": {},
+
 	"telemetry": {
 		"diagnostics": false,
 		"metrics": false
@@ -74,15 +68,7 @@
 		}
 	},
 
-	"features": {
-		"edit_prediction_provider": "supermaven"
-	},
-
-	"edit_predictions": {
-		"mode": "subtle"
-	},
-
-	"auto_install_extensions": {},
+	"disable_ai": true,
 
 	"ssh_connections": [],
 	"read_ssh_config": true
