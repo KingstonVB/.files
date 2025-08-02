@@ -1,7 +1,3 @@
-# ssh-agent auto start
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-eval $(keychain --eval --quiet arch_desktop)
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -12,10 +8,10 @@ fi
 # OMZ Configurations
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
-ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Aliases
 alias update="sudo pacman -Syu && flatpak update && paru -Sua"
+alias vbackup="git add . && git commit -m \"vault backup: $(date +'%Y-%m-%d %H:%M:%S')\""
 alias ..="cd .."
 alias cp="cp -i"
 alias mv="mv -i"
@@ -34,6 +30,7 @@ cd() {
 
 # Zoxide init
 eval "$(zoxide init zsh)"
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
