@@ -593,7 +593,11 @@
     },
 
     "auto_install_extensions": {
-        "html": false
+        "html": true,
+        "catppuccin": true,
+        "git-firefly": true,
+        "qml": true,
+        "hyprlang": true
     },
 
     "completions": {
