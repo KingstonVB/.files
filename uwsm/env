@@ -2,7 +2,4 @@ export = XCURSOR_SIZE=24
 export = HYPRCURSOR_SIZE=24
 
 export = QT_QPA_PLATFORMTHEME=qt6ct
-export = GTK_THEME=Adwaita-dark
 
-export = __GLX_VENDOR_LIBRARY_NAME=nvidia
-export = LIBVA_DRIVER_NAME=nvidia
