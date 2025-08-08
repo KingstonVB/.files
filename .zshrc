@@ -1,6 +1,12 @@
 # OMZ Configurations
 export ZSH="$HOME/.oh-my-zsh"
+export ZSH_THEME="powerlevel10k/powerlevel10k"
 source $ZSH/oh-my-zsh.sh
+
+# p10k
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 DISABLE_MAGIC_FUNCTIONS="true"
 ENABLE_CORRECTION="true"
@@ -31,8 +37,9 @@ alias vbackup="git add . && git commit -m \"vault backup: $(date +'%Y-%m-%d %H:%
 alias ..="cd .."
 alias cp="cp -i"
 alias mv="mv -i"
-alias rm="trash -v"
+#alias rm="trash -v"
 alias ff="fastfetch"
+alias search="~/.files/scripts/search.sh"
 
 # Fucntions
 cd() {
@@ -46,7 +53,6 @@ cd() {
 
 # Zoxide init
 eval "$(zoxide init zsh)"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # Other Settings
 HISTSIZE=5000
@@ -54,3 +60,6 @@ SAVEHIST=100000
 setopt autocd extendedglob
 unsetopt beep
 bindkey -v
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
