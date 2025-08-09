@@ -2,16 +2,12 @@
 set -e
 
 SCRIPTS=~/archinstall/install-scripts
-REPO=https://github.com/K-Bayard/.files/tree/main/scripts/archinstall
 
 install_text() {
     clear
     echo "$1"
     echo
 }
-
-install_text "Installing needed files"
-wget $REPO
 
 install_text "Configuring Paru and installing packages"
 source $SCRIPTS/aur.sh
