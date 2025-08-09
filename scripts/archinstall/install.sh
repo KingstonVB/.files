@@ -2,7 +2,7 @@
 set -e
 
 SCRIPTS=~/install-scripts/
-REPO=https://raw.github.com/K-Bayard/.files/tree/main/scripts/archinstall/
+REPO=https://raw.githubusercontent.com/K-Bayard/.files/tree/main/scripts/archinstall/
 
 install_text() {
     clear
