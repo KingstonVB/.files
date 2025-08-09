@@ -14,6 +14,7 @@ install_text "Installing needed files"
 mkdir -p archinstall/install-scripts
 cd archinstall
 wget $REPO/install.sh
+cd install-scripts
 wget $REPO/install-scripts/{aur.sh,dotfiles.sh,firewall.sh,oh-my-zsh.sh,p10k.sh,packages.sh,powerprofile.sh,theme.sh}
 
 install_text "Configuring Paru and installing packages"
