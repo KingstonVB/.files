@@ -13,7 +13,15 @@ install_text() {
 install_text "Installing needed files"
 mkdir install-scripts
 cd install-scripts
-curl -O $REPO/{aur.sh,packages.sh,dotfiles.sh,powerprofile.sh,firewall.sh,theme.sh}
+curl -O $REPO/aur.sh
+curl -O $REPO/packages.sh
+curl -O $REPO/dotfiles.sh
+curl -O $REPO/powerprofile.sh
+curl -O $REPO/firewall.sh
+curl -O $REPO/theme.sh
+curl -O $REPO/oh-my-zsh.sh
+curl -O $REPO/p10k.sh
+cd ~
 
 install_text "Configuring Paru and installing packages"
 source $SCRIPTS/aur.sh
@@ -60,7 +68,7 @@ install_text "Everything should be configured..."
 read -rp "Do you want to remove downloaded files? (y/N): " remove_choice
 if [[ "$remove_choice" =~ ^[Yy]$ ]]; then
     echo "Removing downloaded files..."
-    rm -rf ~/archinstall
+    rm -rf ~/install-scripts
     echo "Files removed"
 else
     echo "Keeping files"
