@@ -2,7 +2,7 @@
 set -e
 
 SCRIPTS=~/install-scripts/
-REPO=https://raw.github.com/K-Bayard/.files/tree/main/scripts/archinstall/install-scripts/
+REPO=https://raw.github.com/K-Bayard/.files/tree/main/scripts/archinstall/
 
 install_text() {
     clear
@@ -11,9 +11,7 @@ install_text() {
 }
 
 install_text "Installing needed files"
-mkdir install-scripts
-cd install-scripts
-curl -o $REPO/aur.sh
+wget -r $REPO/install-scripts
 
 install_text "Configuring Paru and installing packages"
 source $SCRIPTS/aur.sh
