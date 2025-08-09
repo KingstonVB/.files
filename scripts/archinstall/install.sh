@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-SCRIPTS=~/archinstall/install-scripts
-REPO=https://github.com/K-Bayard/.files/tree/main/scripts/archinstall
+SCRIPTS=~/install-scripts/
+REPO=https://github.com/K-Bayard/.files/tree/main/scripts/archinstall/install-scripts/
 
 install_text() {
     clear
@@ -11,12 +11,9 @@ install_text() {
 }
 
 install_text "Installing needed files"
-mkdir archinstall
-cd archinstall
-curl -o $REPO/install.sh
 mkdir install-scripts
 cd install-scripts
-curl -o $REPO/install-scripts/aur.sh
+curl -o $REPO/aur.sh
 
 install_text "Configuring Paru and installing packages"
 source $SCRIPTS/aur.sh
