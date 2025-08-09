@@ -11,7 +11,7 @@ install_text() {
 }
 
 install_text "Installing needed files"
-wget -r $REPO
+wget $REPO
 
 install_text "Configuring Paru and installing packages"
 source $SCRIPTS/aur.sh
