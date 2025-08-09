@@ -11,7 +11,7 @@ install_text() {
 }
 
 install_text "Installing needed files"
-curl -o $REPO/aur.sh
+curl -o https://raw.githubusercontent.com/K-Bayard/.files/refs/heads/main/scripts/archinstall/install-scripts/aur.sh
 
 install_text "Configuring Paru and installing packages"
 source $SCRIPTS/aur.sh
