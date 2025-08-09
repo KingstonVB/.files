@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-REPO=https://raw.githubusercontent.com/K-Bayard/.files/refs/heads/main/srcipts/archinstall/install-scripts
+SCRIPTS=~/archinstall/install-scripts
+REPO=https://github.com/K-Bayard/.files/tree/main/scripts/archinstall
 
 install_text() {
     clear
@@ -9,21 +10,24 @@ install_text() {
     echo
 }
 
+install_text "Installing needed files"
+wget -r $REPO
+
 install_text "Configuring Paru and installing packages"
-curl -fsSL $REPO/aur.sh
-curl -fsSL $REPO/packages.sh
+source $SCRIPTS/aur.sh
+source $SCRIPTS/packages.sh
 
 install_text "Setting up dotfiles"
-curl -fsSL $REPO/dotfiles.sh
+source $SCRIPTS/dotfiles.sh
 
 install_text "Setting power profile to performance"
-curl -fsSL $REPO/powerprofile.sh
+source $SCRIPTS/powerprofile.sh
 
 install_text "Setting up and restricting firewall"
-curl -fsSL $REPO/firewall.sh
+source $SCRIPTS/firewall.sh
 
 install_text "Setting up themese"
-curl -fsSL $REPO/theme.sh
+source $SCRIPTS/theme.sh
 
 install_text "Updating system"
 sudo pacman -Syu
@@ -34,7 +38,7 @@ install_text "ZSH Stuff"
 read -rp "Do you want to configure OHZ now? (y/n): " choice
 if [[ "$choice" =~ ^[Yy]$ ]]; then
     echo "Installing OMZ"
-    curl -fsSL $REPO/oh-my-zsh.sh
+    source $SCIPRTS/oh-my-zsh.sh
     echo "Installed"
 else
     echo "Not installing OMZ"
@@ -44,7 +48,7 @@ install_text "Powerlevel 10k stuff"
 read -rp "Do you want to configure p10k now? (y/n): " choice
 if [[ "$choice" =~ ^[Yy]$ ]]; then
     echo "Installing p10k"
-    curl -fsSL $REPO/p10k.sh
+    source $SCRIPTS/p10k.sh
     echo "Installed"
 else
     echo "Not installing p10k"
