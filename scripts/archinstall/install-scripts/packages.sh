@@ -9,21 +9,18 @@ FLATPAK_PACKAGES=(
     com.github.PintaProject.Pinta
     com.saivert.pwvucontrol
     io.typora.Typora
+    dev.vencord.Vesktop
 )
 
 AUR_PACKAGES=(
     hyprsysteminfo
-    lazydocker-bin
-    legcord-bin
     ttf-ia-writer
     walker-bin
     yaru-icon-theme
-    ufw-docker
 )
 
 ##########################
 ## Install Applications ##
 ##########################
-
 flatpak install --noninteractive flathub "${FLATPAK_PACKAGES[@]}"
 paru -S --needed --noconfirm  "${AUR_PACKAGES[@]}"
