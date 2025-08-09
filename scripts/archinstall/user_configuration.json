@@ -107,7 +107,6 @@
         "power-profiles-daemon",
         "nvidia-utils",
         "lib32-nvidia-utils",
-        "egl-wayland",
-        "nvidia-vaapi-driver"
+        "egl-wayland"
     ]
 }
