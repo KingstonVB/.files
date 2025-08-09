@@ -30,6 +30,26 @@ sudo pacman -Syu
 flatpak update
 paru -Sau
 
+install_text "ZSH Stuff"
+read -rp "Do you want to configure OHZ now? (y/n): " choice
+if [[ "$choice" =~ ^[Yy]$ ]]; then
+    echo "Installing OMZ"
+    source $SCIPRTS/oh-my-zsh.sh
+    echo "Installed"
+else
+    echo "Not installing OMZ"
+fi
+
+install_text "Powerlevel 10k stuff"
+read -rp "Do you want to configure p10k now? (y/n): " choice
+if [[ "$choice" =~ ^[Yy]$ ]]; then
+    echo "Installing p10k"
+    source $SCRIPTS/p10k.sh
+    echo "Installed"
+else
+    echo "Not installing p10k"
+fi
+
 install_text "Everything should be configured..."
 read -rp "Do you want to remove downloaded files? (y/N): " remove_choice
 if [[ "$remove_choice" =~ ^[Yy]$ ]]; then
