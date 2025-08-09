@@ -11,7 +11,7 @@ install_text() {
 }
 
 install_text "Installing needed files"
-mkdir archinstall
+mkdir -p archinstall/install-scripts
 cd archinstall
 wget $REPO/install.sh
 wget $REPO/install-scripts/{aur.sh,dotfiles.sh,firewall.sh,oh-my-zsh.sh,p10k.sh,packages.sh,powerprofile.sh,theme.sh}
