@@ -1,7 +1,7 @@
 app_launch_prefix = "uwsm app -- "
 terminal_title_flag = ""
 locale = ""
-close_when_open = true             # Toggle on reopen
+close_when_open = true
 # theme = "omarchy-default"
 # theme_base = []
 # theme_location = ["~/.local/share/omarchy/default/walker/themes/"]
