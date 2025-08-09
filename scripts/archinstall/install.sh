@@ -13,10 +13,10 @@ install_text() {
 install_text "Installing needed files"
 mkdir archinstall
 cd archinstall
-wget $REPO/install.sh
+curl -O $REPO/install.sh
 mkdir install-scripts
 cd install-scripts
-wget $REPO/install-scripts/{aur.sh,dotfiles.sh,firewall.sh,oh-my-zsh.sh,p10k.sh,packages.sh,powerprofile.sh,theme.sh}
+curl -O $REPO/install-scripts/{aur.sh,dotfiles.sh,firewall.sh,oh-my-zsh.sh,p10k.sh,packages.sh,powerprofile.sh,theme.sh}
 
 install_text "Configuring Paru and installing packages"
 source $SCRIPTS/aur.sh
