@@ -10,20 +10,20 @@ install_text() {
 }
 
 install_text "Configuring Paru and installing packages"
-sh -c "$(curl -fsSL $REPO/aur.sh)"
-sh -c "$(curl -fsSL $REPO/packages.sh)"
+curl -fsSL $REPO/aur.sh
+curl -fsSL $REPO/packages.sh
 
 install_text "Setting up dotfiles"
-sh -c "$(curl -fsSL $REPO/dotfiles.sh)"
+curl -fsSL $REPO/dotfiles.sh
 
 install_text "Setting power profile to performance"
-sh -c "$(curl -fsSL $REPO/powerprofile.sh)"
+curl -fsSL $REPO/powerprofile.sh
 
 install_text "Setting up and restricting firewall"
-sh -c "$(curl -fsSL $REPO/firewall.sh)"
+curl -fsSL $REPO/firewall.sh
 
 install_text "Setting up themese"
-sh -c "$(curl -fsSL $REPO/theme.sh)"
+curl -fsSL $REPO/theme.sh
 
 install_text "Updating system"
 sudo pacman -Syu
@@ -34,7 +34,7 @@ install_text "ZSH Stuff"
 read -rp "Do you want to configure OHZ now? (y/n): " choice
 if [[ "$choice" =~ ^[Yy]$ ]]; then
     echo "Installing OMZ"
-    sh -c "$(curl -fsSL $REPO/oh-my-zsh.sh)"
+    curl -fsSL $REPO/oh-my-zsh.sh
     echo "Installed"
 else
     echo "Not installing OMZ"
@@ -44,7 +44,7 @@ install_text "Powerlevel 10k stuff"
 read -rp "Do you want to configure p10k now? (y/n): " choice
 if [[ "$choice" =~ ^[Yy]$ ]]; then
     echo "Installing p10k"
-    sh -c "$(curl -fsSL $REPO/p10k.sh)"
+    curl -fsSL $REPO/p10k.sh
     echo "Installed"
 else
     echo "Not installing p10k"
