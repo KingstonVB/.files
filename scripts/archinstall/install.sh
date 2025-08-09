@@ -16,7 +16,7 @@ cd archinstall
 curl -o $REPO/install.sh
 mkdir install-scripts
 cd install-scripts
-curl -o $REPO/install-scripts/{aur.sh,dotfiles.sh,firewall.sh,oh-my-zsh.sh,p10k.sh,packages.sh,powerprofile.sh,theme.sh}
+curl -o $REPO/install-scripts/aur.sh
 
 install_text "Configuring Paru and installing packages"
 source $SCRIPTS/aur.sh
