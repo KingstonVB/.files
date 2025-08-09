@@ -1,8 +1,5 @@
 {
     "custom_commands": [
-        "sed -i 's/^MODULES=.*/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia-drm)/' /etc/mkinitcpio.conf || echo 'MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia-drm)' >> /etc/mkinitcpio.conf",
-        "mkinitcpio -P",
-
         "sed -i '/^\\[options\\]/a Color\\nILoveCandy' /etc/pacman.conf"
     ],
 
@@ -81,7 +78,6 @@
         "udiskie",
         "udisks2",
         "unzip",
-        "uwsm",
         "wf-recorder",
         "wget",
         "whois",
@@ -90,6 +86,7 @@
         "wl-clipboard",
         "xdg-desktop-portal-gtk",
         "xdg-desktop-portal-hyprland",
+        "nwg-look",
         "xournalpp",
         "zed",
         "zig",
@@ -107,6 +104,10 @@
         "libva-nvidia-driver",
         "qt5-wayland",
         "qt6-wayland",
-        "power-profiles-daemon"
+        "power-profiles-daemon",
+        "nvidia-utils",
+        "lib32-nvidia-utils",
+        "egl-wayland",
+        "nvidia-vaapi-driver"
     ]
 }
