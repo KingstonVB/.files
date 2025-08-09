@@ -41,8 +41,8 @@ source $SCRIPTS/theme.sh
 
 install_text "Updating system"
 sudo pacman -Syu
-flatpak update
-paru -Sau
+flatpak --nointeractive update
+paru -Sau --noconfirm
 
 install_text "ZSH Stuff"
 read -rp "Do you want to configure OHZ now? (y/n): " choice
