@@ -110,6 +110,7 @@
         "power-profiles-daemon",
         "nvidia-utils",
         "lib32-nvidia-utils",
-        "egl-wayland"
+        "egl-wayland",
+        "gnome-software"
     ]
 }
