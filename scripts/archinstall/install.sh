@@ -27,9 +27,6 @@ install_text "Configuring Paru and installing packages"
 source $SCRIPTS/aur.sh
 source $SCRIPTS/packages.sh
 
-install_text "Setting up dotfiles"
-source $SCRIPTS/dotfiles.sh
-
 install_text "Setting power profile to performance"
 source $SCRIPTS/powerprofile.sh
 
@@ -38,3 +35,6 @@ source $SCRIPTS/firewall.sh
 
 install_text "Setting up themese"
 source $SCRIPTS/theme.sh
+
+install_text "Configuring home items"
+mkdir downloads documents pictures videos music
