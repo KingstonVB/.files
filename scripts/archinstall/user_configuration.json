@@ -111,6 +111,7 @@
         "nvidia-utils",
         "lib32-nvidia-utils",
         "egl-wayland",
-        "gnome-software"
+        "gnome-software",
+        "libqalculate"
     ]
 }
