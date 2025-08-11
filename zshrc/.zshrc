@@ -31,6 +31,9 @@ export LESS='-R -F -i -M -W -x4 -X'
 export MANPAGER="less -R"
 export MANROFFOPT="-c"
 
+# SSH
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
 # Aliases
 alias update="sudo pacman -Syu && flatpak update && paru -Sua"
 alias vbackup="git add . && git commit -m \"vault backup: $(date +'%Y-%m-%d %H:%M:%S')\""
