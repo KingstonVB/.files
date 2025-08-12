@@ -1,7 +1,8 @@
 #!/bin/bash
-##################
-## Applications ##
-##################
+ARCH_PACKAGES =(
+
+)
+
 FLATPAK_PACKAGES=(
     com.github.tchx84.Flatseal
     org.vinegarhq.Sober
@@ -19,8 +20,6 @@ AUR_PACKAGES=(
     yaru-icon-theme
 )
 
-##########################
-## Install Applications ##
-##########################
+sudo pacman --needed --noconfirm "${ARCH_PACKAGES[@]}"
 flatpak install --noninteractive flathub "${FLATPAK_PACKAGES[@]}"
 paru -S --needed --noconfirm  "${AUR_PACKAGES[@]}"
