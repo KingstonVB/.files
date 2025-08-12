@@ -23,18 +23,11 @@ curl -O $REPO/oh-my-zsh.sh
 curl -O $REPO/p10k.sh
 cd ~
 
-install_text "Configuring Paru and installing packages"
 source $SCRIPTS/aur.sh
 source $SCRIPTS/packages.sh
 
-install_text "Setting power profile to performance"
 source $SCRIPTS/powerprofile.sh
 
-install_text "Setting up and restricting firewall"
 source $SCRIPTS/firewall.sh
 
-install_text "Setting up themese"
 source $SCRIPTS/theme.sh
-
-install_text "Configuring home items"
-mkdir downloads documents pictures videos music
