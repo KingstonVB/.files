@@ -1,103 +1,114 @@
 {
-    "theme": {
-        "mode": "dark",
-        "light": "Catppuccin Latte",
-        "dark": "Catppuccin Mocha"
-    },
-    "icon_theme": "Zed (Default)",
+  "theme": {
+    "mode": "dark",
+    "light": "Ayu Light",
+    "dark": "Ayu Dark"
+  },
+  "icon_theme": "Zed (Default)",
 
-    "base_keymap": "VSCode",
+  "base_keymap": "VSCode",
 
-    "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
-    "buffer_font_fallbacks": ["Zed Plex Mono"],
-    "buffer_font_features": { "calt": false },
-    "buffer_font_size": 16,
-    "buffer_font_weight": 400,
-    "buffer_line_height": "comfortable",
+  "buffer_font_family": "Zed Plex Mono",
+  "buffer_font_features": { "calt": 0 },
+  "buffer_font_size": 15,
+  "buffer_font_weight": 400,
+  "buffer_line_height": "comfortable",
 
-    "ui_font_family": "Zed Plex Sans",
-    "ui_font_fallbacks": null,
-    "ui_font_features": { "calt": false },
-    "ui_font_weight": 400,
-    "ui_font_size": 16,
+  "ui_font_family": "Zed Plex Sans",
+  "ui_font_features": { "calt": false },
+  "ui_font_weight": 400,
+  "ui_font_size": 16,
 
-    "pane_split_direction_horizontal": "down",
-    "pane_split_direction_vertical": "right",
+  "pane_split_direction_horizontal": "down",
+  "pane_split_direction_vertical": "right",
 
-    "vim_mode": true,
+  "vim_mode": true,
 
-    "cursor_blink": false,
-    "cursor_shape": null,
+  "cursor_blink": false,
+  "cursor_shape": null,
 
-    "inline_code_actions": true,
+  "inline_code_actions": true,
 
-    "show_whitespaces": "trailing",
+  "show_whitespaces": "trailing",
 
-    "title_bar": {
-        "show_branch_icon": false,
-        "show_branch_name": true,
-        "show_project_items": true,
-        "show_onboarding_banner": false,
-        "show_user_picture": false,
-        "show_sign_in": false,
-        "show_menus": false
-    },
+  "title_bar": {
+    "show_branch_icon": false,
+    "show_branch_name": true,
+    "show_project_items": true,
+    "show_onboarding_banner": false,
+    "show_user_picture": false,
+    "show_sign_in": false,
+    "show_menus": false
+  },
 
-    "scrollbar": { "show": "never" },
+  "scrollbar": { "show": "never" },
 
-    "minimap": {
-        "show": "always",
-        "display_in": "active_editor",
-        "thumb": "always",
-        "thumb_border": "none",
-        "current_line_highlight": null,
-        "max_width_columns": 80
-    },
+  "minimap": {
+    "show": "always",
+    "display_in": "active_editor",
+    "thumb": "always",
+    "thumb_border": "none",
+    "current_line_highlight": null,
+    "max_width_columns": 80
+  },
 
-    "inlay_hints": { "enabled": true },
+  "inlay_hints": {
+    "enabled": true,
+    "show_value_hints": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "show_background": false,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50,
+    "toggle_on_modifiers_press": {
+      "control": false,
+      "alt": false,
+      "shift": false,
+      "platform": false,
+      "function": false
+    }
+  },
 
-    "outline_panel": { "button": false },
+  "outline_panel": { "button": false },
 
-    "remove_trailing_whitespace_on_save": true,
-    "ensure_final_newline_on_save": false,
+  "remove_trailing_whitespace_on_save": true,
+  "ensure_final_newline_on_save": false,
 
-    "format_on_save": "on",
+  "format_on_save": "on",
 
-    "formatter": "auto",
+  "formatter": "auto",
 
-    "soft_wrap": "bounded",
+  "soft_wrap": "bounded",
 
-    "preferred_line_length": 240,
+  "preferred_line_length": 240,
 
-    "hard_tabs": false,
-    "tab_size": 4,
+  "hard_tabs": false,
+  "tab_size": 4,
 
-    "telemetry": {
-        "diagnostics": false,
-        "metrics": false
-    },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
 
-    "disable_ai": true,
+  "disable_ai": true,
 
-    "auto_install_extensions": {
-        "html": true,
-        "catppuccin": true,
-        "git-firefly": true,
-        "hyprlang": true
-    },
+  "auto_install_extensions": {
+    "hyprlang": true
+  },
 
-    "vim": {
-        "default_mode": "normal",
-        "toggle_relative_line_numbers": true,
-        "use_system_clipboard": "never",
-        "use_smartcase_find": false,
-        "highlight_on_yank_duration": 200,
-        "custom_digraphs": {},
-        "cursor_shape": {}
-    },
+  "vim": {
+    "default_mode": "normal",
+    "toggle_relative_line_numbers": true,
+    "use_system_clipboard": "never",
+    "use_smartcase_find": false,
+    "highlight_on_yank_duration": 200,
+    "custom_digraphs": {},
+    "cursor_shape": {}
+  },
 
-    "line_indicator_format": "long",
+  "line_indicator_format": "long",
 
-    "ssh_connections": [],
-    "read_ssh_config": true
+  "ssh_connections": [],
+  "read_ssh_config": true
 }
