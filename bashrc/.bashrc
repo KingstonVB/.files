@@ -13,13 +13,5 @@ export LESS='-R -F -i -M -W -x4 -X'
 export MANPAGER="less -R"
 export MANROFFOPT="-c"
 
-cd() {
-  if [ -n "$1" ]; then
-    builtin cd "$@" && ls
-  else
-    builtin cd ~ && ls
-  fi
-}
-
 # Set a custom prompt with the directory revealed (alternatively use https://starship.rs)
 # PS1="\W \[\e]0;\w\a\]$PS1"

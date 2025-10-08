@@ -1,24 +1,24 @@
-theme = tokyo-night.conf
+# Dynamic theme colors
+config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 
+# Font
 font-family = "CaskaydiaMono Nerd Font"
+font-style = Regular
 font-size = 12
-
 font-feature = -liga
 font-feature = -calt
 font-feature = -dlig
 
-font-thicken = true
+# Window
+window-padding-x = 14
+window-padding-y = 14
+confirm-close-surface=false
+resize-overlay = never
 
-confirm-close-surface = false
-
-shell-integration = zsh
+# Cursor styling
+cursor-style = "block"
+cursor-style-blink = false
 shell-integration-features = no-cursor
 
-window-padding-balance = true
-cursor-style = block
-cursor-style-blink = false
-cursor-invert-fg-bg = true
-window-padding-color = extend
-
-window-padding-x = 4
-window-padding-y = 0
+# Keyboard bindings
+keybind = f11=toggle_fullscreen
