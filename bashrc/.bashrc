@@ -13,5 +13,4 @@ export LESS='-R -F -i -M -W -x4 -X'
 export MANPAGER="less -R"
 export MANROFFOPT="-c"
 
-# Set a custom prompt with the directory revealed (alternatively use https://starship.rs)
-# PS1="\W \[\e]0;\w\a\]$PS1"
+export SSH_AUTH_SOCK=$HOME/.bitwarden-ssh-agent.sock
