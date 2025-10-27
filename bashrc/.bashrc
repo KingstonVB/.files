@@ -14,3 +14,8 @@ export MANPAGER="less -R"
 export MANROFFOPT="-c"
 
 export SSH_AUTH_SOCK=$HOME/.bitwarden-ssh-agent.sock
+
+# Add your own exports, aliases, and functions here.
+#
+# Make an alias for invoking commands you use constantly
+# alias p='python'
